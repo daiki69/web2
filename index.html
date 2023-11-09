@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>レポート課題-計算機</title>
+    <style>
+      /*CSSのエリア*/
+
+      /*ボタンのスタイル*/
+      button {
+        padding: 15px 30px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; 
+      }
+      .green-btn {
+        background-color: rgb(45, 180, 45);
+      }
+      .blue-btn {
+        background-color: rgb(0, 89, 255);
+      }
+      .red-btn {
+        background-color: rgba(255, 98, 98, 0.87);
+      }
+      .gray-btn {
+        background-color: rgb(54, 54, 54);
+      }
+      .orange-btn {
+        background-color: rgb(255, 174, 0);
+      }
+
+      /*結果の表示スタイル*/
+      #result {
+        margin-top: 10px;
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- コンテンツのエリア -->
+    <p>数1<input tyep="text" id="input1" placeholder="計算したい数字を入力"></p>
+    <p>数2<input tyep="text" id="input2" placeholder="計算したい数字を入力"></p>
+    <p><button class="green-btn"onclick="btn1()">足し算（+）</button></p>
+    <p><button class="blue-btn"onclick="btn2()">引き算（-）</button></p>
+    <p><button class="red-btn"onclick="btn3()">掛け算（×）</button></p>
+    <p><button class="gray-btn"onclick="btn4()">割り算（÷）</button></p>
+    <p><button class="orange-btn"onclick="btn5()">剰余算</button></p>
+    <p id="result"></p>
+    <script>
+      //JavaScriptのエリア
+
+      //ボタン1-足し算の処理
+      function btn1(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =parseFloat(input1.value);
+         let input2Value =parseFloat(input2.value);
+         let totalValue= input1Value+input2Value;
+         document.getElementById("result").innerText="足し算をした結果 は"+totalValue+"です！";
+      }      
+      document.write(totalValue);
+        //ボタン2-引き算の処理
+      function btn2(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =parseFloat(input1.value);
+         let input2Value =parseFloat(input2.value);
+         let totalValue= input1Value-input2Value;
+         document.getElementById("result").innerText="引き算をした結果 は"+totalValue+"です！";
+      }         
+
+        //ボタン3-掛け算の処理
+        function btn3(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =parseFloat(input1.value);
+         let input2Value =parseFloat(input2.value);
+         let totalValue= input1Value*input2Value;
+         document.getElementById("result").innerText="掛け算をした結果 は"+totalValue+"です！";
+      }                
+        //ボタン4-割り算の処理
+        function btn4(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =parseFloat(input1.value);
+         let input2Value =parseFloat(input2.value);
+         let totalValue= input1Value/input2Value;
+         document.getElementById("result").innerText="割り算をした結果 は"+totalValue+"です！";
+      }                 
+        //ボタン5-剰余算の処理
+        function btn5(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =parseFloat(input1.value);
+         let input2Value =parseFloat(input2.value);
+         let quotientValue= Math.floor(input1Value/input2Value); //割り算をすると小数点以下の表示となるので、Math.floor関数を利用して商の値を出力する
+         let modValue=input1Value%input2Value; //剰余算
+         document.getElementById("result").innerText="結果："+quotientValue+"で割り切れて、余りは、"+modValue+"です！";
+      }                 
+
+
+
+    </script>
+  </body>
+</html>
