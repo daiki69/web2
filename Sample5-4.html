@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>レポート課題-計算機</title>
+    <style>
+      /*CSSのエリア*/
+    </style>
+  </head>
+  <body>
+    <!-- コンテンツのエリア -->
+    <p>数1<input tyep="text" id="input1" placeholder="計算したい数字を入力"></p>
+    <p>数2<input tyep="text" id="input2" placeholder="計算したい数字を入力"></p>
+    <p><button onclick="btn1()">足し算（+）</button></p>
+    <p><button onclick="btn2()">引き算（-）</button></p>
+    <p><button onclick="btn3()">掛け算（×）</button></p>
+    <p><button onclick="btn4()">割り算（÷）</button></p>
+    <script>
+      //JavaScriptのエリア
+      function btn1(){
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+         let input1Value =input1.value;
+         let input2Value =input2.value;
+         let TotalValue= input1Value+input2Value
+      }      
+      document.write(TotalValue);
+
+    </script>
+  </body>
+</html>
