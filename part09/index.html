@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>サンプル9-3</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>xの座標:<span id="px"></span>px</p>
+    <p>yの座標:<span id="py"></span>px</p>
+    <script>
+      const px = document.getElementById("px");
+      const py = document.getElementById("py");
+      let x,y;
+      document.addEventListener("touchmove",function(e){
+        e.preventDefault();
+        x = e.touches[0].clientX;
+        y = e.touches[0].clientY;
+        px.innerHTML=x;
+        py.innerHTML=y;
+      },{ passive : false }
+      );
+    </script>
+  </body>
+</html>
